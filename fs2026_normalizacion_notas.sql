@@ -3,7 +3,7 @@ USE fs2026_normalizacion_notas;
 
 CREATE TABLE grados(
       grado_id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-      grado VARCHAR(20) NOT NULL
+      grado VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE secciones(
@@ -13,20 +13,20 @@ CREATE TABLE secciones(
 
 CREATE TABLE unidades(
       unidad_id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-      unidad VARCHAR(20) NOT NULL
+      unidad VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE cursos(
       curso_id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-      curso VARCHAR(30) NOT NULL
+      curso VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE estudiantes(
       carnet INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-      apellidos VARCHAR(50) NOT NULL,
-      nombres VARCHAR(50) NOT NULL,
+      apellidos VARCHAR(60) NOT NULL,
+      nombres VARCHAR(60) NOT NULL,
       grado_id INT UNSIGNED,
-      seccion_id INT UNSIGNED
+      seccion_id INT UNSIGNED,
 
       CONSTRAINT estudiante_grado_id_fk FOREIGN KEY (grado_id)
   		REFERENCES grados(grado_id)
