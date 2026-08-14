@@ -1,5 +1,5 @@
-CREATE DATABASE if NOT EXISTS fs2026_normalizacion_libros1;
-USE fs2026_normalizacion_libros1;
+CREATE DATABASE if NOT EXISTS fs2026_normalizacion_libros2;
+USE fs2026_normalizacion_libros2;
 
 CREATE TABLE nacionalidades(
 		nacionalidad_id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
